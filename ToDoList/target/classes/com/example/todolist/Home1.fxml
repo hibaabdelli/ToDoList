@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="594.0" prefWidth="1049.0" style="-fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todolist.HomeController">
+    <children>
+        <BorderPane prefHeight="594.0" prefWidth="1049.0" style="-fx-background-color: #89A8B2; -fx-background-radius: 1em;" AnchorPane.rightAnchor="0.0">
+            <center>
+                <BorderPane prefHeight="584.0" prefWidth="518.0" style="-fx-background-color: E5E1DA; -fx-background-radius: 1em;" BorderPane.alignment="CENTER">
+                    <top>
+                        <Pane prefHeight="125.0" prefWidth="542.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label fx:id="sating" layoutX="37.0" layoutY="80.0" prefHeight="28.0" prefWidth="123.0" text="12.5% comp">
+                                    <font>
+                                        <Font size="22.0" />
+                                    </font>
+                                </Label>
+                        <ChoiceBox fx:id="choice" layoutX="373.0" layoutY="88.0" prefWidth="150.0" style="-fx-background-radius: 2em;" />
+                        <ChoiceBox fx:id="choice2" layoutX="208.0" layoutY="88.0" prefWidth="150.0" style="-fx-background-radius: 2em;" />
+                        <Label layoutX="37.0" layoutY="49.0" prefHeight="28.0" prefWidth="118.0" text="12.5% abs">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="21.0" text="75% not_comp">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                            </children>
+                        </Pane>
+                    </top>
+                    <center>
+                        <BorderPane prefHeight="274.0" prefWidth="542.0" BorderPane.alignment="CENTER">
+                            <center>
+                                <ScrollPane prefWidth="495.0" style="-fx-border-color: #FBFCFC;">
+                                    <content>
+                                        <VBox fx:id="vbox2" alignment="TOP_CENTER" prefHeight="488.0" prefWidth="511.0" spacing="5.0" style="-fx-background-color: #FBFCFC;">
+                                            <padding>
+                                                <Insets bottom="10.0" top="10.0" />
+                                            </padding>
+                                        </VBox>
+                                    </content>
+                                </ScrollPane>
+                            </center>
+                            <top>
+                                <Label fx:id="chosel" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="38.0" prefWidth="139.0" text="show bord:" BorderPane.alignment="CENTER_LEFT">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                    <padding>
+                                        <Insets bottom="10.0" left="45.0" top="10.0" />
+                                    </padding>
+                                </Label>
+                            </top>
+                        </BorderPane>
+                    </center>
+                    <BorderPane.margin>
+                        <Insets right="5.0" />
+                    </BorderPane.margin>
+                </BorderPane>
+            </center>
+            <left>
+                <Pane prefHeight="509.0" prefWidth="497.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="tfSearch" alignment="CENTER" layoutX="77.0" layoutY="146.0" onAction="#searshh" prefHeight="34.0" prefWidth="325.0" promptText="Search Task or Project    " style="-fx-background-color: #51717b; -fx-background-radius: 1em;" stylesheets="@../styles/fullpackstyling.css">
+                            <padding>
+                                <Insets left="15.0" />
+                            </padding>
+                     <font>
+                        <Font name="Apple Braille" size="13.0" />
+                     </font>
+                        </TextField>
+                        <Label fx:id="lblProjectCount" layoutX="75.0" layoutY="218.0" text="TASKES:" textFill="#fbfcfc" />
+                        <Label fx:id="lblName" layoutX="77.0" layoutY="56.0" text="Task Manager" textFill="#fbfcfc">
+                            <font>
+                                <Font name="Microsoft JhengHei" size="31.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblGreeting" layoutX="75.0" layoutY="108.0" text="Welcome back to your workspace - some work to be done ;-)" textFill="WHITE" />
+                        <VBox fx:id="vbox" layoutX="19.0" layoutY="248.0" prefHeight="276.0" prefWidth="452.0" spacing="5.0">
+                     <children>
+                        <ScrollPane prefHeight="282.0" prefWidth="452.0" style="-fx-background-color: #89A8B2;">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="443.0" />
+                          </content>
+                        </ScrollPane>
+                     </children></VBox>
+                        <Button fx:id="add" layoutX="443.0" layoutY="531.0" mnemonicParsing="false" onAction="#ADDB" style="-fx-background-radius: 1em;" text="+">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                  <Button fx:id="b2" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" text="&lt;---" />
+                    </children>
+                </Pane>
+            </left>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </BorderPane>
+    </children>
+</AnchorPane>
